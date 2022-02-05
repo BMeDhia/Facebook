@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FbLogo from "../assets/5168781.png";
+import HeaderIcon from "./HeaderIcon";
 import {
   BellIcon,
   ChatIcon,
@@ -17,8 +18,7 @@ import {
 
 function Header() {
   return (
-    <div>
-      <div>Header</div>
+    <header className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
       {/* Left */}
       <div className="flex items-center">
         <Image src={FbLogo} width={40} height={40} layout="fixed" />
@@ -33,9 +33,17 @@ function Header() {
         </div>
       </div>
       {/* Center */}
-
+      <div className="flex justify-center flex-grow">
+        <div className="flex space-x-6 md:space-x-2">
+          <HeaderIcon active={true} Icon={HomeIcon} />
+          <HeaderIcon Icon={FlagIcon} />
+          <HeaderIcon Icon={PlayIcon} />
+          <HeaderIcon Icon={ShoppingCartIcon} />
+          <HeaderIcon Icon={UserGroupIcon} />
+        </div>
+      </div>
       {/* Right */}
-    </div>
+    </header>
   );
 }
 export default Header;
