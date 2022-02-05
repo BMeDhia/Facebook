@@ -16,6 +16,9 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 
+const rIconsStyle =
+  "hidden xl:inline-flex p-2 h-10 w-10 bg-gray-200 rounded-full text-gray-70 cursor-pointer hover:bg-gray-300";
+
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
@@ -43,6 +46,14 @@ function Header() {
         </div>
       </div>
       {/* Right */}
+      <div className="flex items-center sm:space-x-2 justify-end">
+        {/* profile pic later */}
+        <p className="whitespace-nowrap font-semibold pr-3">Med D. Bouthuri</p>
+        <ViewGridIcon className={rIconsStyle} />
+        <ChatIcon className={rIconsStyle} />
+        <BellIcon className={rIconsStyle} />
+        <ChevronDownIcon className={rIconsStyle} />
+      </div>
     </header>
   );
 }
