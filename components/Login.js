@@ -9,7 +9,7 @@ function Login() {
         onClick={signIn}
         className="p-5 bg-blue-500 text-white text-center rounded mt-20 cursor-pointer"
       >
-        Loogin with Facebook
+        deploy test
       </h1>
     </div>
   );
