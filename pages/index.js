@@ -1,10 +1,11 @@
-import { getSession } from "next-auth/react";
+import { getSession } from "next-auth/client";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
 import Login from "../components/Login";
 
 export default function Home({ session }) {
+  // console.log(process.env.FACEBOOK_CLIENT_ID, 'zae');
   if (!session) return <Login />;
   return (
     <div>
